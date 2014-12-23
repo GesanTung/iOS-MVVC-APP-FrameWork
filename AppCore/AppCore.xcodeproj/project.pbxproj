@@ -81,6 +81,19 @@
 		1838752C1A42B4A7000D63B7 /* theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183875291A42B4A7000D63B7 /* theme.plist */; };
 		183875311A42C20A000D63B7 /* KKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183875301A42C20A000D63B7 /* KKNavigationController.m */; };
 		183875351A42C600000D63B7 /* PPRevealSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183875341A42C600000D63B7 /* PPRevealSideViewController.m */; };
+		183875381A42D863000D63B7 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183875371A42D863000D63B7 /* ListViewController.m */; };
+		18B92D3C1A43F32F008761A4 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18B92D321A43F32F008761A4 /* MJRefresh.bundle */; };
+		18B92D3D1A43F32F008761A4 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D351A43F32F008761A4 /* MJRefreshBaseView.m */; };
+		18B92D3E1A43F32F008761A4 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D371A43F32F008761A4 /* MJRefreshConst.m */; };
+		18B92D3F1A43F32F008761A4 /* MJRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D391A43F32F008761A4 /* MJRefreshFooterView.m */; };
+		18B92D401A43F32F008761A4 /* MJRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D3B1A43F32F008761A4 /* MJRefreshHeaderView.m */; };
+		18B92D451A43FBEB008761A4 /* UINavbarPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D431A43FBEB008761A4 /* UINavbarPickerView.m */; };
+		18B92D461A43FBEB008761A4 /* UINavbarPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B92D441A43FBEB008761A4 /* UINavbarPickerView.xib */; };
+		18B92D4A1A440518008761A4 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D491A440518008761A4 /* Message.m */; };
+		18B92D4D1A440755008761A4 /* NetServe.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D4C1A440755008761A4 /* NetServe.m */; };
+		18B92D541A441A05008761A4 /* AFHTTPAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D521A441A05008761A4 /* AFHTTPAccessor.m */; };
+		18B92D581A441FAF008761A4 /* DataLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D571A441FAF008761A4 /* DataLog.m */; };
+		93C97794AF0E4599BBC28B3E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2245D96DD98D4A0D891C7471 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +256,31 @@
 		183875301A42C20A000D63B7 /* KKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNavigationController.m; sourceTree = "<group>"; };
 		183875331A42C600000D63B7 /* PPRevealSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRevealSideViewController.h; sourceTree = "<group>"; };
 		183875341A42C600000D63B7 /* PPRevealSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPRevealSideViewController.m; sourceTree = "<group>"; };
+		183875361A42D863000D63B7 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		183875371A42D863000D63B7 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		18B92D321A43F32F008761A4 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
+		18B92D331A43F32F008761A4 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
+		18B92D341A43F32F008761A4 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
+		18B92D351A43F32F008761A4 /* MJRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshBaseView.m; sourceTree = "<group>"; };
+		18B92D361A43F32F008761A4 /* MJRefreshConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshConst.h; sourceTree = "<group>"; };
+		18B92D371A43F32F008761A4 /* MJRefreshConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshConst.m; sourceTree = "<group>"; };
+		18B92D381A43F32F008761A4 /* MJRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshFooterView.h; sourceTree = "<group>"; };
+		18B92D391A43F32F008761A4 /* MJRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshFooterView.m; sourceTree = "<group>"; };
+		18B92D3A1A43F32F008761A4 /* MJRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshHeaderView.h; sourceTree = "<group>"; };
+		18B92D3B1A43F32F008761A4 /* MJRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshHeaderView.m; sourceTree = "<group>"; };
+		18B92D421A43FBEB008761A4 /* UINavbarPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UINavbarPickerView.h; sourceTree = "<group>"; };
+		18B92D431A43FBEB008761A4 /* UINavbarPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UINavbarPickerView.m; sourceTree = "<group>"; };
+		18B92D441A43FBEB008761A4 /* UINavbarPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UINavbarPickerView.xib; sourceTree = "<group>"; };
+		18B92D481A440518008761A4 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		18B92D491A440518008761A4 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		18B92D4B1A440755008761A4 /* NetServe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetServe.h; sourceTree = "<group>"; };
+		18B92D4C1A440755008761A4 /* NetServe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetServe.m; sourceTree = "<group>"; };
+		18B92D511A441A05008761A4 /* AFHTTPAccessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPAccessor.h; sourceTree = "<group>"; };
+		18B92D521A441A05008761A4 /* AFHTTPAccessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPAccessor.m; sourceTree = "<group>"; };
+		18B92D561A441FAF008761A4 /* DataLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataLog.h; sourceTree = "<group>"; };
+		18B92D571A441FAF008761A4 /* DataLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataLog.m; sourceTree = "<group>"; };
+		2245D96DD98D4A0D891C7471 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C81C181DEAE4616AD29F3CC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183872541A427D12000D63B7 /* UIKit.framework in Frameworks */,
+				93C97794AF0E4599BBC28B3E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +311,8 @@
 				183872171A426AC6000D63B7 /* AppCoreTests */,
 				183871FC1A426AC6000D63B7 /* Products */,
 				183872551A427DBA000D63B7 /* Framework */,
+				4C81C181DEAE4616AD29F3CC /* Pods.xcconfig */,
+				D87C18C3DFFF4081B0185565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -329,6 +370,10 @@
 		183872241A426D16000D63B7 /* Depend */ = {
 			isa = PBXGroup;
 			children = (
+				18B92D551A441F74008761A4 /* DataLayer */,
+				18B92D471A44044A008761A4 /* NetServe */,
+				18B92D411A43FBEB008761A4 /* SubtabPicker */,
+				18B92D311A43F32F008761A4 /* MJRefresh */,
 				183875321A42C600000D63B7 /* PPRevealSideviewController */,
 				1838752E1A42C20A000D63B7 /* KKNavigationController */,
 				183875231A42B208000D63B7 /* Singleton */,
@@ -352,6 +397,8 @@
 				183872261A426D7E000D63B7 /* TungTableController.m */,
 				183872281A4273AA000D63B7 /* BaseViewController.h */,
 				183872291A4273AA000D63B7 /* BaseViewController.m */,
+				183875361A42D863000D63B7 /* ListViewController.h */,
+				183875371A42D863000D63B7 /* ListViewController.m */,
 			);
 			path = Depend;
 			sourceTree = "<group>";
@@ -595,6 +642,71 @@
 			path = PPRevealSideviewController;
 			sourceTree = "<group>";
 		};
+		18B92D311A43F32F008761A4 /* MJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				18B92D321A43F32F008761A4 /* MJRefresh.bundle */,
+				18B92D331A43F32F008761A4 /* MJRefresh.h */,
+				18B92D341A43F32F008761A4 /* MJRefreshBaseView.h */,
+				18B92D351A43F32F008761A4 /* MJRefreshBaseView.m */,
+				18B92D361A43F32F008761A4 /* MJRefreshConst.h */,
+				18B92D371A43F32F008761A4 /* MJRefreshConst.m */,
+				18B92D381A43F32F008761A4 /* MJRefreshFooterView.h */,
+				18B92D391A43F32F008761A4 /* MJRefreshFooterView.m */,
+				18B92D3A1A43F32F008761A4 /* MJRefreshHeaderView.h */,
+				18B92D3B1A43F32F008761A4 /* MJRefreshHeaderView.m */,
+			);
+			path = MJRefresh;
+			sourceTree = "<group>";
+		};
+		18B92D411A43FBEB008761A4 /* SubtabPicker */ = {
+			isa = PBXGroup;
+			children = (
+				18B92D421A43FBEB008761A4 /* UINavbarPickerView.h */,
+				18B92D431A43FBEB008761A4 /* UINavbarPickerView.m */,
+				18B92D441A43FBEB008761A4 /* UINavbarPickerView.xib */,
+			);
+			path = SubtabPicker;
+			sourceTree = "<group>";
+		};
+		18B92D471A44044A008761A4 /* NetServe */ = {
+			isa = PBXGroup;
+			children = (
+				18B92D4E1A441A05008761A4 /* AFHTTPAccessor */,
+				18B92D481A440518008761A4 /* Message.h */,
+				18B92D491A440518008761A4 /* Message.m */,
+				18B92D4B1A440755008761A4 /* NetServe.h */,
+				18B92D4C1A440755008761A4 /* NetServe.m */,
+			);
+			path = NetServe;
+			sourceTree = "<group>";
+		};
+		18B92D4E1A441A05008761A4 /* AFHTTPAccessor */ = {
+			isa = PBXGroup;
+			children = (
+				18B92D511A441A05008761A4 /* AFHTTPAccessor.h */,
+				18B92D521A441A05008761A4 /* AFHTTPAccessor.m */,
+			);
+			path = AFHTTPAccessor;
+			sourceTree = "<group>";
+		};
+		18B92D551A441F74008761A4 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				18B92D561A441FAF008761A4 /* DataLog.h */,
+				18B92D571A441FAF008761A4 /* DataLog.m */,
+			);
+			name = DataLayer;
+			sourceTree = "<group>";
+		};
+		D87C18C3DFFF4081B0185565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2245D96DD98D4A0D891C7471 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -602,9 +714,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1838721E1A426AC6000D63B7 /* Build configuration list for PBXNativeTarget "AppCore" */;
 			buildPhases = (
+				1813D38FF8174DADB4DE44DC /* Check Pods Manifest.lock */,
 				183871F71A426AC6000D63B7 /* Sources */,
 				183871F81A426AC6000D63B7 /* Frameworks */,
 				183871F91A426AC6000D63B7 /* Resources */,
+				618C9182EF364D4094FC3EF7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -679,9 +793,11 @@
 				183875221A42AD67000D63B7 /* applayout.plist in Resources */,
 				1838752C1A42B4A7000D63B7 /* theme.plist in Resources */,
 				1838720A1A426AC6000D63B7 /* Main.storyboard in Resources */,
+				18B92D461A43FBEB008761A4 /* UINavbarPickerView.xib in Resources */,
 				183872CF1A42835E000D63B7 /* LICENSE in Resources */,
 				1838720F1A426AC6000D63B7 /* LaunchScreen.xib in Resources */,
 				183872A41A428346000D63B7 /* LICENSE in Resources */,
+				18B92D3C1A43F32F008761A4 /* MJRefresh.bundle in Resources */,
 				1838722F1A4273FD000D63B7 /* UINavigationBarView.xib in Resources */,
 				1838720C1A426AC6000D63B7 /* Images.xcassets in Resources */,
 				1838725E1A428042000D63B7 /* LICENSE in Resources */,
@@ -697,13 +813,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1813D38FF8174DADB4DE44DC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		618C9182EF364D4094FC3EF7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		183871F71A426AC6000D63B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B92D3F1A43F32F008761A4 /* MJRefreshFooterView.m in Sources */,
 				183872D91A42835E000D63B7 /* UIButton+WebCache.m in Sources */,
 				1838722E1A4273FD000D63B7 /* UINavigationBarView.m in Sources */,
+				183875381A42D863000D63B7 /* ListViewController.m in Sources */,
 				183873FA1A42837E000D63B7 /* UIGestureRecognizer+SHGestureRecognizerBlocks.m in Sources */,
 				1838724E1A427A63000D63B7 /* UIColorSwitch.m in Sources */,
 				183872071A426AC6000D63B7 /* ViewController.m in Sources */,
@@ -721,6 +872,7 @@
 				183872D71A42835E000D63B7 /* SDWebImageManager.m in Sources */,
 				1838726D1A428334000D63B7 /* GCDGroup.m in Sources */,
 				183872DE1A42835E000D63B7 /* UIView+WebCacheOperation.m in Sources */,
+				18B92D541A441A05008761A4 /* AFHTTPAccessor.m in Sources */,
 				183872D21A42835E000D63B7 /* SDImageCache.m in Sources */,
 				1838722A1A4273AA000D63B7 /* BaseViewController.m in Sources */,
 				183872D41A42835E000D63B7 /* SDWebImageDecoder.m in Sources */,
@@ -731,23 +883,30 @@
 				1838729B1A428346000D63B7 /* AFHTTPRequestOperation.m in Sources */,
 				1838724B1A427A63000D63B7 /* UIAutoScrollLabel.m in Sources */,
 				1838729E1A428346000D63B7 /* AFNetworkReachabilityManager.m in Sources */,
+				18B92D581A441FAF008761A4 /* DataLog.m in Sources */,
 				183872DB1A42835E000D63B7 /* UIImage+MultiFormat.m in Sources */,
 				183872A91A428346000D63B7 /* UIButton+AFNetworking.m in Sources */,
 				183872601A428042000D63B7 /* README.mdown in Sources */,
 				183872A31A428346000D63B7 /* AFURLSessionManager.m in Sources */,
+				18B92D401A43F32F008761A4 /* MJRefreshHeaderView.m in Sources */,
 				1838724C1A427A63000D63B7 /* UIColor+Utils.m in Sources */,
 				183875351A42C600000D63B7 /* PPRevealSideViewController.m in Sources */,
 				183872D01A42835E000D63B7 /* README.md in Sources */,
 				1838729C1A428346000D63B7 /* AFHTTPRequestOperationManager.m in Sources */,
 				1838729D1A428346000D63B7 /* AFHTTPSessionManager.m in Sources */,
+				18B92D3E1A43F32F008761A4 /* MJRefreshConst.m in Sources */,
 				183872A61A428346000D63B7 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				18B92D4D1A440755008761A4 /* NetServe.m in Sources */,
 				183872041A426AC6000D63B7 /* AppDelegate.m in Sources */,
+				18B92D451A43FBEB008761A4 /* UINavbarPickerView.m in Sources */,
 				183872D81A42835E000D63B7 /* SDWebImagePrefetcher.m in Sources */,
+				18B92D3D1A43F32F008761A4 /* MJRefreshBaseView.m in Sources */,
 				183875311A42C20A000D63B7 /* KKNavigationController.m in Sources */,
 				183872A21A428346000D63B7 /* AFURLResponseSerialization.m in Sources */,
 				183872A11A428346000D63B7 /* AFURLRequestSerialization.m in Sources */,
 				183874061A42A0D5000D63B7 /* CMTabBarController.m in Sources */,
 				183872DC1A42835E000D63B7 /* UIImageView+HighlightedWebCache.m in Sources */,
+				18B92D4A1A440518008761A4 /* Message.m in Sources */,
 				183874051A42A0D5000D63B7 /* CMTabBar.m in Sources */,
 				183872581A42802C000D63B7 /* UIViewController+MBHud.m in Sources */,
 				183872DA1A42835E000D63B7 /* UIImage+GIF.m in Sources */,
@@ -883,10 +1042,12 @@
 		};
 		1838721F1A426AC6000D63B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C81C181DEAE4616AD29F3CC /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = AppCore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -894,10 +1055,12 @@
 		};
 		183872201A426AC6000D63B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C81C181DEAE4616AD29F3CC /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				INFOPLIST_FILE = AppCore/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -956,6 +1119,7 @@
 				183872201A426AC6000D63B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183872211A426AC6000D63B7 /* Build configuration list for PBXNativeTarget "AppCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -964,6 +1128,7 @@
 				183872231A426AC6000D63B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -46,14 +46,8 @@ typedef enum {
 //时间显示
 + (NSString *)timeValue:(NSTimeInterval)interval;
 
-//日期显示
-+ (NSString *)dateValue:(NSTimeInterval)interval;
-
 //根据播放时间长度格式化为小时分钟表示
 + (NSString *)videoPlayTimeValue:(double)time;
-
-//根据当前时间获取星期几
-+ (int)weekday;
 
 // 正则判断字符串是否是手机号码
 + (BOOL)isMobileNumber:(NSString *)mobileNum;

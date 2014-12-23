@@ -17,10 +17,13 @@
 #import "CMTabBarController.h"
 #import "PPRevealSideViewController.h"
 #import "KKNavigationController.h"
+#import "AFNetworking.h"
+#import "ReactiveCocoa.h"
 //第三方库头文件引用
 
 
 //应用程序使用的头文件引用
 #import "OC+Extensions.h"
+#import "UINavbarPickerView.h"
 
 #endif

@@ -15,11 +15,24 @@
 
 @implementation BaseViewController
 @synthesize navigationBarView = _navigationBarView ;
+@synthesize offset_y = _offset_y ;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initDataLog];
+    [self.view setFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    NSLog(@"%@",NSStringFromCGRect(self.view.frame));
     [self initUINavbar];
 }
-
+- (void)initDataLog{
+    self.dataLog = [DataLog DataLog];
+    [RACObserve(self.dataLog, data) subscribeNext: ^(NSDictionary *data){
+        NSLog(@"newName:%@", data);
+        [self updateThisUI:data];
+    }];
+}
+- (void)requstData:(Message*)message{
+    [self.dataLog SEND_ACTION:message];
+}
 - (void)initUINavbar
 {
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -38,11 +51,13 @@
     
     //顶部导航条
     _navigationBarView = [UIView viewWithXibString:@"UINavigationBarView"];
+    [_navigationBarView setFrameW:kScreenWidth];
     [_navigationBarView setBackgroundColor:[UIColor colorWithRGB:UIColorBlueDark]];
     _navigationBarView.callback = callback;
     _navigationBarView.labelTitle.text = @"活动";
     [_navigationBarView.buttonLeft setImage:[UIImage imageNamed:@"icon_t_返回.png"] forState:UIControlStateNormal];
     [self.view addSubview:_navigationBarView];
+    _offset_y = CGRectGetHeight(_navigationBarView.frame);
 }
 - (void)setNavTitle:(NSString*)text{
     _navigationBarView.labelTitle.text = text;
@@ -70,6 +85,8 @@
     
 }
 
+- (void)updateThisUI:(id)json{
 
+}
 
 @end
