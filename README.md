@@ -2,5 +2,5 @@ GesanTung
 =========
 
 code for love
-t
-this is a sample dome for cocos2d-x win
+
+this is a APP Framework for iOS ceder Efficient, Fast,develop APP
