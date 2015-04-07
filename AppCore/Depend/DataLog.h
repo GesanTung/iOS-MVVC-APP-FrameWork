@@ -10,9 +10,13 @@
 #import "NetServe.h"
 #import "Message.h"
 #import "ReactiveCocoa.h"
-@interface DataLog : NSObject
+
+typedef void (^DataBlock)(NSDictionary *listdata);
+
+@interface DataLog : NSObject<ActionDelegate>
 @property(nonatomic,retain)NSDictionary *data;
-@property(nonatomic,strong)NetServe *action;
+@property(nonatomic,strong)DataBlock callBack;
+@property(nonatomic,retain)NetServe *action;
 @property(nonatomic,assign)BOOL active;
 + (id)DataLog;
 - (void)handleActionMsg:(Message *)msg;

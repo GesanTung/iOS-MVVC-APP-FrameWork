@@ -47,4 +47,6 @@ typedef NS_ENUM(NSInteger, LayoutStyle) {
 #define UIColorBlueDark             0x3b58aa
 #define UIColorDarkRed              0xB22222
 #define UIColorDefaultImageBG       0xDDDDDD
+
+
 #endif

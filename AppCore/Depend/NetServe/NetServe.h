@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "ARCSingletonTemplate.h"
+#import "ActionDelegate.h"
 #import "AFHTTPAccessor.h"
 #import "Message.h"
+
+typedef void (^NetServeBlock)(Message *msg);
+
 @interface NetServe : NSObject
+
+@property(nonatomic,weak)id<ActionDelegate> aDelegaete;
+
+@property (nonatomic, strong) NetServeBlock netServeCallBack;
+
 @property(nonatomic,assign)BOOL cacheEnable;
 @property(nonatomic,assign)BOOL dataFromCache;
 

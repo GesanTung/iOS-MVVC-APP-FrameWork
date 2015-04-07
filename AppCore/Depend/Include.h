@@ -17,6 +17,8 @@
 #import "CMTabBarController.h"
 #import "PPRevealSideViewController.h"
 #import "KKNavigationController.h"
+#import "UIImageView+WebCache.h"
+#import "SDWebImage+Extension.h"
 #import "AFNetworking.h"
 #import "ReactiveCocoa.h"
 //第三方库头文件引用

@@ -5,7 +5,7 @@
 	<key>leftpage</key>
 	<dict>
 		<key>hasleftpage</key>
-		<false/>
+		<true/>
 		<key>leftpagestlye</key>
 		<integer>0</integer>
 		<key>leftpageitem</key>
@@ -25,7 +25,7 @@
 	<key>rightpage</key>
 	<dict>
 		<key>hasrightpage</key>
-		<false/>
+		<true/>
 		<key>rightpagestlye</key>
 		<integer>0</integer>
 		<key>rightpageitem</key>
@@ -67,6 +67,20 @@
 			<dict>
 				<key>title</key>
 				<string>办事</string>
+				<key>icon</key>
+				<string></string>
+				<key>isNavigationController</key>
+				<true/>
+				<key>navBarStyle</key>
+				<integer>1</integer>
+				<key>classname</key>
+				<string>ViewController</string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>领导</string>
 				<key>icon</key>
 				<string></string>
 				<key>isNavigationController</key>

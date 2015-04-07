@@ -36,7 +36,7 @@
     [[AppLayoutCenter sharedAppLayoutCenter]loadFromBundleWithFileName:@"applayout"];
     //根据返回的数据决定底部TabBar的显示. 类型为Tabbar且count=1时，默认不显示Tabbabr。
     id datas = [[AppLayoutCenter sharedAppLayoutCenter]getTabBarList];
-    int c_total = [datas count];
+    long c_total = [datas count];
     NSMutableArray *arr = [NSMutableArray arrayWithCapacity:3];
     [datas enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         UIViewController *controller = [[AppLayoutCenter sharedAppLayoutCenter]controllerWithDictionary:obj];

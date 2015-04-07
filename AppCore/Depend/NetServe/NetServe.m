@@ -19,7 +19,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
     [NetServe sharedNetServe];
 }
 
-+(id)netServe{
++ (id)netServe{
     return [[[self class] alloc] init];
 }
 - (id)init
@@ -39,18 +39,18 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
     return self;
 }
 
--(void)useCache{
+- (void)useCache{
     _cacheEnable = YES;
 }
 
--(void)readFromCache{
+- (void)readFromCache{
     _dataFromCache = YES;
 }
--(void)notReadFromCache{
+- (void)notReadFromCache{
     _dataFromCache = NO;
 }
 
--(void)send:(Message *)msg{
+- (void)send:(Message *)msg{
     if([msg.METHOD isEqualToString:@"GET"]){
         return [self GET:msg];
     }else{
@@ -58,7 +58,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
     }
 }
 
--(void) GET:(Message *)msg
+- (void) GET:(Message *)msg
 {
     NSString *url = @"";
     if(!msg.SCHEME.length || !msg.HOST.length){
@@ -71,6 +71,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
     }else{
         url = [url stringByAppendingString:msg.appendPathInfo];
     }
+    if (msg.url.length) {
+        url = msg.url;
+    }
     
     [self sending:msg];
     
@@ -79,7 +82,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
     //网络请求成功回调函数
     AFHTTPSuccessCallback success = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         msg.output = JSON;
-        
+        [self success:msg];
     };
     
     //网络请求失败回调函数
@@ -99,25 +102,36 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
 }
 
 
--(void)sending:(Message *)msg{
+- (void)sending:(Message *)msg{
     msg.state = SendingState;
-//    if([self.aDelegaete respondsToSelector:@selector(handleActionMsg:)]){
-//        [self.aDelegaete handleActionMsg:msg];
-//    }
+    if([self.aDelegaete respondsToSelector:@selector(handleActionMsg:)]){
+        //[self.aDelegaete handleActionMsg:msg];
+    }
+    if (_netServeCallBack) {
+        _netServeCallBack(msg);
+    }
 }
 
 - (void)success:(Message *)msg{
     if (msg.state != SuccessState) {
         msg.state = SuccessState;
-//        if([self.aDelegaete respondsToSelector:@selector(handleActionMsg:)]){
-//            [self.aDelegaete handleActionMsg:msg];
-//        }
+        if([self.aDelegaete respondsToSelector:@selector(handleActionMsg:)]){
+            //[self.aDelegaete handleActionMsg:msg];
+        }
+        if (_netServeCallBack) {
+            _netServeCallBack(msg);
+        }
     }
 }
 
 - (void)failed:(Message *)msg{
     msg.state = FailState;
-  
+    if([self.aDelegaete respondsToSelector:@selector(handleActionMsg:)]){
+        [self.aDelegaete handleActionMsg:msg];
+    }
+    if (_netServeCallBack) {
+        _netServeCallBack(msg);
+    }
 
 }
 

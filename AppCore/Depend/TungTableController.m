@@ -7,21 +7,50 @@
 //
 
 #import "TungTableController.h"
+#import "BaseTableViewCell.h"
 
 @interface TungTableController ()
 
 @end
 
 @implementation TungTableController
+@synthesize loglayer;
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    loglayer = [DataLog DataLog];
+
+    @weakify(self);
+    [RACObserve(self,self.gPageIndex) subscribeNext:^(id data) {
+        @strongify(self);
+        
+        Message *msg =[Message Message];
+        msg.url = @"http://tibetbss.cn/api.php?mod=xzksPlazalist";
+        msg.METHOD = @"GET";
+        [loglayer SEND_ACTION:msg];
+        __block TungTableController* weakself = self;
+        loglayer.callBack = ^(NSDictionary* dic){
+            weakself.dataArray = [dic objectForKey:@"datas"];
+            [self.tableView reloadData];
+        };
+        [self endRefreshing];
+        
+    }];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self addHeader];
+    [self addFooter];
 }
 
 - (void)addFooter
@@ -35,7 +64,7 @@
         // 在此发起网络请求加载更多数据
         NSLog(@"%@----开始进入刷新状态", refreshView.class);
         self.isRefresh = NO;
-        //[self HTTPRequest:HTTPLevelList];
+        self.gPageIndex = 0;
     };
     _footer = footer;
 }
@@ -54,6 +83,7 @@
         // 在此发起网络请求加载更多数据
         NSLog(@"%@----开始进入刷新状态", refreshView.class);
         self.isRefresh = YES;
+        self.gPageIndex = 0;
         if(_footer) {[_footer setHasMore:YES];}
 //        [self HTTPRequest:HTTPLevelList];
     };
@@ -84,7 +114,7 @@
                 break;
         }
     };
-    [header beginRefreshing];
+  //  [header beginRefreshing];
     _header = header;
 }
 
@@ -115,4 +145,36 @@
 }
 
 
+
+#pragma mark - UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *reuseIdetify = [self.parameter objectForKey:@"cell"];
+    BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdetify];
+    if (!cell) {
+        cell = [UIView viewWithXibString:reuseIdetify];
+        cell.tag = indexPath.row;
+    }
+    cell.dict = [_dataArray safeObjectAtIndex:indexPath.row];
+    [cell initCellView];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     NSString *reuseIdetify = [self.parameter objectForKey:@"cell"];
+    return  [NSClassFromString(reuseIdetify) height];
+}
 @end

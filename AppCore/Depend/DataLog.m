@@ -24,7 +24,11 @@
 
 - (void)loadSceneModel{
     self.action = [NetServe netServe];
-
+    self.action.aDelegaete = self;
+    __block DataLog *weakself = self;
+    self.action.netServeCallBack = ^(Message *msg){
+        [weakself handleActionMsg:msg];
+    };
 }
 
 - (void)loadActive{
@@ -49,8 +53,11 @@
     if(msg.sending){
         NSLog(@"sending:%@",msg.url);
     }else if(msg.succeed){
-        self.data = msg.output;
+        self.data = [NSDictionary dictionaryWithDictionary:msg.output] ;
         NSLog(@"success:%@",msg.output);
+        if (self.callBack) {
+            _callBack(self.data);
+        }
     }else if(msg.failed){
         NSLog(@"failed:%@",msg.error);
     }
