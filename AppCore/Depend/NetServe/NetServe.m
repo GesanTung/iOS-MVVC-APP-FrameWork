@@ -53,8 +53,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
 - (void)send:(Message *)msg{
     if([msg.METHOD isEqualToString:@"GET"]){
         return [self GET:msg];
-    }else{
-       // return [self POST:msg];
+    }else if([msg.METHOD isEqualToString:@"POST"]){
+        return [self POST:msg];
+    }
+    else{
+        msg.error = [NSError errorWithDomain:@"未定义数据请求类型" code:-1001 userInfo:nil];
+        [self failed:msg];
     }
 }
 
@@ -101,6 +105,45 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(NetServe)
     
 }
 
+- (void) POST:(Message *)msg
+{
+    NSString *url = @"";
+    if(!msg.SCHEME.length || !msg.HOST.length){
+        url = [NSString stringWithFormat:@"http://%@%@",[NetServe sharedNetServe].HOST_URL,msg.PATH];
+    }else{
+        url = [NSString stringWithFormat:@"%@://%@%@",msg.SCHEME,msg.HOST,msg.PATH];
+    }
+    if(!msg.appendPathInfo.length || msg.appendPathInfo ==nil){
+        // requestParams = msg.requestParams;
+    }else{
+        url = [url stringByAppendingString:msg.appendPathInfo];
+    }
+    if (msg.url.length) {
+        url = msg.url;
+    }
+    
+    [self sending:msg];
+    
+    //网络请求成功回调函数
+    
+    //网络请求成功回调函数
+    AFHTTPSuccessCallback success = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        msg.output = JSON;
+        [self success:msg];
+    };
+    
+    //网络请求失败回调函数
+    AFHTTPFailureCallback failure = ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        msg.error = error;
+        [self failed:msg];
+    };
+    
+    [AFHTTPAccessor httpRequestWithUrl:url
+                                method:@"POST"
+                                  body:msg.postData
+                               success:success
+                               failure:failure];
+}
 
 - (void)sending:(Message *)msg{
     msg.state = SendingState;

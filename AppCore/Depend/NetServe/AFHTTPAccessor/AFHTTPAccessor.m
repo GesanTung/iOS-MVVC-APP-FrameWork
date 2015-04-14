@@ -51,7 +51,6 @@
                         if(failure) {
                             NSError *error = [NSError errorWithDomain:NSArgumentDomain code:-100 userInfo: [NSDictionary dictionaryWithObjectsAndKeys:NSErrorTimeStamp, NSLocalizedFailureReasonErrorKey, NSErrorTimeStamp, NSLocalizedDescriptionKey, nil] ];
                             
-                            NSLog(@"%s -- > response status : %d, url : %@, error : %@", __FUNCTION__, operation.response.statusCode, operation.response.URL.absoluteString, error.localizedDescription);
                             failure([NSURLRequest requestWithURL:[NSURL URLWithString:url] ], operation.response, error);
                             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                         }
@@ -60,7 +59,6 @@
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 //告知上层
                 if(failure) {
-                    NSLog(@"%s -- > response status : %d, url : %@, error : %@", __FUNCTION__, operation.response.statusCode, operation.response.URL.absoluteString, error.localizedDescription);
                     
                     failure([NSURLRequest requestWithURL:[NSURL URLWithString:url] ], operation.response, error);
                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -108,7 +106,6 @@
     AFHTTPRequestOperation *operation = [manager HTTPRequestOperationWithRequest:request
                                                                      success:^(AFHTTPRequestOperation *operation, id responseObject) {
          if (success) {
-             NSLog(@"%s -- > response status : %d, url : %@", __FUNCTION__, operation.response.statusCode, [request.URL.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
              
              success(operation.request, operation.response, responseObject);
              if(timestamp != nil) {
@@ -118,7 +115,7 @@
          }
                                                                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
          if (failure) {
-             NSLog(@"%s -- > response status : %d, url : %@, error : %@", __FUNCTION__, operation.response.statusCode, [request.URL.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding], error.localizedDescription);
+
              
              failure(operation.request, operation.response, error);
              [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
@@ -208,12 +205,11 @@
 
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"%s -- > response status : %d, url : %@", __FUNCTION__, operation.response.statusCode, [request.URL.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
+
         
         if(success) {success(operation.request, operation.response, responseObject);}
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"%s -- > response status : %d, url : %@, error : %@", __FUNCTION__, operation.response.statusCode, [request.URL.absoluteString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding], error.localizedDescription);
         
         if(failure) {failure(operation.request, operation.response, error);}
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;

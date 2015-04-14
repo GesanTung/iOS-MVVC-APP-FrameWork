@@ -19,6 +19,7 @@ typedef enum
 @interface Message : NSObject
 @property(nonatomic,strong)NSDictionary * output;
 @property(nonatomic,strong)NSString *responseString;
+@property(nonatomic,strong)NSData *postData;
 @property(nonatomic,strong)NSError *error;
 @property(nonatomic,assign)NSInteger state;
 @property(nonatomic,retain)NSString *url;

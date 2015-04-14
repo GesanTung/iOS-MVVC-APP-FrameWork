@@ -85,6 +85,7 @@
 		189AD3291AD3C1FE00CF70C2 /* PageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AD3281AD3C1FE00CF70C2 /* PageCell.m */; };
 		189AD32B1AD3C23600CF70C2 /* PageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189AD32A1AD3C23600CF70C2 /* PageCell.xib */; };
 		189AD32E1AD3CAFD00CF70C2 /* SDWebImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 189AD32D1AD3CAFD00CF70C2 /* SDWebImage+Extension.m */; };
+		189AD3301AD3D90900CF70C2 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189AD32F1AD3D90900CF70C2 /* NewsCell.xib */; };
 		18AFEC231AA41333005E5C5E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFEC221AA41333005E5C5E /* BaseTableViewCell.m */; };
 		18AFEC261AA436C0005E5C5E /* TungControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFEC251AA436C0005E5C5E /* TungControllerData.m */; };
 		18B92D3C1A43F32F008761A4 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18B92D321A43F32F008761A4 /* MJRefresh.bundle */; };
@@ -99,9 +100,10 @@
 		18B92D541A441A05008761A4 /* AFHTTPAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D521A441A05008761A4 /* AFHTTPAccessor.m */; };
 		18B92D581A441FAF008761A4 /* DataLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D571A441FAF008761A4 /* DataLog.m */; };
 		18B9FD581AA99ED300A7238D /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B9FD571AA99ED300A7238D /* NewsCell.m */; };
-		18B9FD5A1AA99F5D00A7238D /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B9FD591AA99F5D00A7238D /* NewsCell.xib */; };
 		18BA3C321A5D76310095B789 /* MXSCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA3C2F1A5D76310095B789 /* MXSCycleScrollView.m */; };
 		18BA3C331A5D76310095B789 /* RBCustomDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA3C311A5D76310095B789 /* RBCustomDatePickerView.m */; };
+		18BBAA411AD5257A00C095E9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BBAA3F1AD5257A00C095E9 /* LoginViewController.m */; };
+		18BBAA421AD5257A00C095E9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BBAA401AD5257A00C095E9 /* LoginViewController.xib */; };
 		93C97794AF0E4599BBC28B3E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2245D96DD98D4A0D891C7471 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -272,6 +274,7 @@
 		189AD32A1AD3C23600CF70C2 /* PageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageCell.xib; sourceTree = "<group>"; };
 		189AD32C1AD3CAFD00CF70C2 /* SDWebImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SDWebImage+Extension.h"; sourceTree = "<group>"; };
 		189AD32D1AD3CAFD00CF70C2 /* SDWebImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage+Extension.m"; sourceTree = "<group>"; };
+		189AD32F1AD3D90900CF70C2 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		18AFEC211AA41333005E5C5E /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		18AFEC221AA41333005E5C5E /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		18AFEC241AA436C0005E5C5E /* TungControllerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TungControllerData.h; sourceTree = "<group>"; };
@@ -300,11 +303,13 @@
 		18B9FD541AA97F6E00A7238D /* ActionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionDelegate.h; sourceTree = "<group>"; };
 		18B9FD561AA99ED300A7238D /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		18B9FD571AA99ED300A7238D /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
-		18B9FD591AA99F5D00A7238D /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewsCell.xib; path = ../../../../Desktop/NewsCell.xib; sourceTree = "<group>"; };
 		18BA3C2E1A5D76310095B789 /* MXSCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSCycleScrollView.h; sourceTree = "<group>"; };
 		18BA3C2F1A5D76310095B789 /* MXSCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSCycleScrollView.m; sourceTree = "<group>"; };
 		18BA3C301A5D76310095B789 /* RBCustomDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCustomDatePickerView.h; sourceTree = "<group>"; };
 		18BA3C311A5D76310095B789 /* RBCustomDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCustomDatePickerView.m; sourceTree = "<group>"; };
+		18BBAA3E1AD5257A00C095E9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		18BBAA3F1AD5257A00C095E9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		18BBAA401AD5257A00C095E9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		2245D96DD98D4A0D891C7471 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C81C181DEAE4616AD29F3CC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -354,6 +359,9 @@
 		183871FD1A426AC6000D63B7 /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
+				18BBAA3E1AD5257A00C095E9 /* LoginViewController.h */,
+				18BBAA3F1AD5257A00C095E9 /* LoginViewController.m */,
+				18BBAA401AD5257A00C095E9 /* LoginViewController.xib */,
 				183872021A426AC6000D63B7 /* AppDelegate.h */,
 				183872031A426AC6000D63B7 /* AppDelegate.m */,
 				183872051A426AC6000D63B7 /* ViewController.h */,
@@ -420,7 +428,7 @@
 				18AFEC221AA41333005E5C5E /* BaseTableViewCell.m */,
 				18B9FD561AA99ED300A7238D /* NewsCell.h */,
 				18B9FD571AA99ED300A7238D /* NewsCell.m */,
-				18B9FD591AA99F5D00A7238D /* NewsCell.xib */,
+				189AD32F1AD3D90900CF70C2 /* NewsCell.xib */,
 				189AD3271AD3C1FE00CF70C2 /* PageCell.h */,
 				189AD3281AD3C1FE00CF70C2 /* PageCell.m */,
 				189AD32A1AD3C23600CF70C2 /* PageCell.xib */,
@@ -845,13 +853,14 @@
 				189AD32B1AD3C23600CF70C2 /* PageCell.xib in Resources */,
 				1838752C1A42B4A7000D63B7 /* theme.plist in Resources */,
 				1838720A1A426AC6000D63B7 /* Main.storyboard in Resources */,
+				18BBAA421AD5257A00C095E9 /* LoginViewController.xib in Resources */,
 				18B92D461A43FBEB008761A4 /* UINavbarPickerView.xib in Resources */,
 				183872CF1A42835E000D63B7 /* LICENSE in Resources */,
 				1838720F1A426AC6000D63B7 /* LaunchScreen.xib in Resources */,
 				183872A41A428346000D63B7 /* LICENSE in Resources */,
 				18B92D3C1A43F32F008761A4 /* MJRefresh.bundle in Resources */,
-				18B9FD5A1AA99F5D00A7238D /* NewsCell.xib in Resources */,
 				1838722F1A4273FD000D63B7 /* UINavigationBarView.xib in Resources */,
+				189AD3301AD3D90900CF70C2 /* NewsCell.xib in Resources */,
 				1838720C1A426AC6000D63B7 /* Images.xcassets in Resources */,
 				1838725E1A428042000D63B7 /* LICENSE in Resources */,
 			);
@@ -928,6 +937,7 @@
 				1838726D1A428334000D63B7 /* GCDGroup.m in Sources */,
 				183872DE1A42835E000D63B7 /* UIView+WebCacheOperation.m in Sources */,
 				18B92D541A441A05008761A4 /* AFHTTPAccessor.m in Sources */,
+				18BBAA411AD5257A00C095E9 /* LoginViewController.m in Sources */,
 				183872D21A42835E000D63B7 /* SDImageCache.m in Sources */,
 				1838722A1A4273AA000D63B7 /* BaseViewController.m in Sources */,
 				183872D41A42835E000D63B7 /* SDWebImageDecoder.m in Sources */,

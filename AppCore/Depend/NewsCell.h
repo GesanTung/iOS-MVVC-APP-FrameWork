@@ -9,6 +9,8 @@
 #import "BaseTableViewCell.h"
 
 @interface NewsCell : BaseTableViewCell
+
+
 @property (weak, nonatomic) IBOutlet UILabel *name;
 
 @end

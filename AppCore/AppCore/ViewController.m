@@ -26,6 +26,10 @@
     [self.view addSubview:table.view];
 }
 
+- (void)rightButtonTouch{
+
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -13,6 +13,7 @@
 @property (nonatomic, assign) CGFloat   offset_y;
 //数据层
 @property (nonatomic, strong) DataLog   *dataLog;
+
 - (void)setNavTitle:(NSString*)text;
 - (void)setNavLeftBtn:(NSString*)content;
 - (void)setNavRightBtn:(NSString*)content;

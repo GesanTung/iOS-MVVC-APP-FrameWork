@@ -154,14 +154,55 @@ static id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingO
 }
 
 #pragma mark - AFURLResponseSerialization
-
+//http post请求 json 序列化底层处理
 - (id)responseObjectForResponse:(NSURLResponse *)response
                            data:(NSData *)data
                           error:(NSError *__autoreleasing *)error
 {
     [self validateResponse:(NSHTTPURLResponse *)response data:data error:error];
-
-    return data;
+    
+    // Workaround for behavior of Rails to return a single space for `head :ok` (a workaround for a bug in Safari), which is not interpreted as valid input by NSJSONSerialization.
+    // See https://github.com/rails/rails/issues/1742
+    NSStringEncoding stringEncoding = self.stringEncoding;
+    if (response.textEncodingName) {
+        CFStringEncoding encoding = CFStringConvertIANACharSetNameToEncoding((CFStringRef)response.textEncodingName);
+        if (encoding != kCFStringEncodingInvalidId) {
+            stringEncoding = CFStringConvertEncodingToNSStringEncoding(encoding);
+        }
+    }
+    
+    id responseObject = nil;
+    NSError *serializationError = nil;
+    @autoreleasepool {
+        NSString *responseString = [[NSString alloc] initWithData:data encoding:stringEncoding];
+        if (responseString && ![responseString isEqualToString:@" "]) {
+            // Workaround for a bug in NSJSONSerialization when Unicode character escape codes are used instead of the actual character
+            // See http://stackoverflow.com/a/12843465/157142
+            
+            // 增加在},]符号之前多了一个逗号的非标准json字符数据的处理
+            responseString = [responseString stringByReplacingOccurrencesOfString:@",}" withString:@"}"];
+            responseString = [responseString stringByReplacingOccurrencesOfString:@",]" withString:@"]"];
+            // 增加结束
+            
+            data = [responseString dataUsingEncoding:NSUTF8StringEncoding];
+            
+            if (data) {
+                if ([data length] > 0) {
+                    responseObject = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)0 error:&serializationError];
+                } else {
+                    return nil;
+                }
+            } else {
+                NSDictionary *userInfo = @{
+                                           NSLocalizedDescriptionKey: NSLocalizedStringFromTable(@"Data failed decoding as a UTF-8 string", @"AFNetworking", nil),
+                                           NSLocalizedFailureReasonErrorKey: [NSString stringWithFormat:NSLocalizedStringFromTable(@"Could not decode string: %@", @"AFNetworking", nil), responseString]
+                                           };
+                
+                serializationError = [NSError errorWithDomain:AFURLResponseSerializationErrorDomain code:NSURLErrorCannotDecodeContentData userInfo:userInfo];
+            }
+        }
+    }
+    return responseObject?responseObject:data;
 }
 
 #pragma mark - NSSecureCoding

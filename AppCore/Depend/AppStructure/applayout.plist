@@ -80,7 +80,7 @@
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>领导</string>
+				<string>登陆</string>
 				<key>icon</key>
 				<string></string>
 				<key>isNavigationController</key>
@@ -88,7 +88,7 @@
 				<key>navBarStyle</key>
 				<integer>1</integer>
 				<key>classname</key>
-				<string>ViewController</string>
+				<string>LoginViewController</string>
 				<key>url</key>
 				<string></string>
 			</dict>
