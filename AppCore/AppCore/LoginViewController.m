@@ -29,8 +29,7 @@
 
 
 - (IBAction)logonClick:(id)sender {
-    NSString *post =@"username=15708483462&password=98765&loginsubmit=yes";
-    
+    NSString *post =@"username=15708483462&password=098765&loginsubmit=yes";
     Message *msg =[Message Message];
     msg.url = @"http://tibetbss.cn/api.php?mod=xzksLogin";
     msg.METHOD = @"POST";

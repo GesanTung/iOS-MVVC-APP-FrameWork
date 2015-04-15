@@ -18,11 +18,3 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 #endif
-
-// From here to end of file added by Injection Plugin //
-
-#ifdef DEBUG
-#define INJECTION_ENABLED 1
-#endif
-
-#import "/Users/apple/Library/Application Support/Developer/Shared/Xcode/Plug-ins/InjectionPlugin.xcplugin/Contents/Resources/BundleInterface.h"

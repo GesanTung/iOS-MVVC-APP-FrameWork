@@ -8,6 +8,7 @@
 
 #import "PageCell.h"
 #import "Globals.h"
+
 @implementation PageCell
 
 - (void)initCellView{

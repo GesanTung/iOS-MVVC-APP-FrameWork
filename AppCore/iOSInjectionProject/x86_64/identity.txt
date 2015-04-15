@@ -1,0 +1,2 @@
+/Users/apple/Library/Developer/Xcode/DerivedData/AppCore-boyxkclocxyifvhkjcavzdpnkscc/Build/Products/Debug-iphonesimulator/AppCore.app
+
