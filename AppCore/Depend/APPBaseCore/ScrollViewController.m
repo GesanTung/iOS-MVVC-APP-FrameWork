@@ -7,7 +7,7 @@
 //
 
 #import "ScrollViewController.h"
-#import "BaseScrollCellView.h"
+
 #import "Globals.h"
 @interface ScrollViewController ()
 
@@ -19,11 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
 }
 
-- (void)setDataByList:(NSArray*)list className:(NSString*)name{
+- (void)setDataByList:(NSArray*)list className:(NSString*)name delegate:(id<ScrollViewDelegate>)delegate{
 //    self.scrollContentView.frame = self.view.frame;
     [self.scrollContentView setFrameH:100];
     self.scrollContentView.backgroundColor = [UIColor redColor];
@@ -31,8 +29,9 @@
      [list enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
          BaseScrollCellView *item = [UIView viewWithXibString:name];
          [self.scrollContentView addSubview:item];
-         //[item setDict:obj];
-         //[item initCellView];
+         item.delegate = delegate;
+         [item setDict:obj];
+         [item initCellView];
          if (_isHorizontal) {
              item.frame = CGRectMake(offset,0 ,  CGRectGetWidth(item.frame), CGRectGetHeight(self.view.frame));
              offset+=  CGRectGetWidth(item.frame);

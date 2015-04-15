@@ -10,7 +10,7 @@
 #import "ScrollViewController.h"
 #import "ProductView.h"
 #import "Globals.h"
-@interface LoginViewController ()
+@interface LoginViewController ()<ScrollViewDelegate>
 - (IBAction)logonClick:(id)sender;
 
 @end
@@ -23,7 +23,7 @@
     ScrollViewController *controller = [[ScrollViewController alloc]init];
     controller.view.frame = CGRectMake(10, 100, kScreenWidth-20, 100);
     NSArray *list = @[@"",@""];
-    [controller setDataByList:list className:@"ProductView"];
+    [controller setDataByList:list className:@"ProductView" delegate:self];
     [self.view addSubview:controller.view];
     [self addChildViewController:controller];
     
@@ -47,6 +47,12 @@
     self.dataLog.callBack = ^(NSDictionary* dic){
   
     };
-    
 }
+
+#pragma mark ScrollViewDelegate
+- (void)select:(int)index item:(id)object{
+
+
+}
+
 @end

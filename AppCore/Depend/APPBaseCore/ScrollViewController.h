@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BaseScrollCellView.h"
 @interface ScrollViewController : UIViewController
 
 //isHorizontal 为真表示水平滚动，默认竖直滚动
 @property (nonatomic,assign) BOOL isHorizontal;
 
-- (void)setDataByList:(NSArray*)list className:(NSString*)name;
+- (void)setDataByList:(NSArray*)list className:(NSString*)name delegate:(id<ScrollViewDelegate>)delegate;
 
 @end
