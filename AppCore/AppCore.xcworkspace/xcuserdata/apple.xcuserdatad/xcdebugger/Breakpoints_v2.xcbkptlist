@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AppCore/LoginViewController.m"
-            timestampString = "450687185.003119"
+            timestampString = "450773725.371158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "-logonClick:"
             landmarkType = "5">
          </BreakpointContent>

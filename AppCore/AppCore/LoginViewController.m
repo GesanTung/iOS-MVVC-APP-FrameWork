@@ -7,7 +7,9 @@
 //
 
 #import "LoginViewController.h"
-
+#import "ScrollViewController.h"
+#import "ProductView.h"
+#import "Globals.h"
 @interface LoginViewController ()
 - (IBAction)logonClick:(id)sender;
 
@@ -18,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    ScrollViewController *controller = [[ScrollViewController alloc]init];
+    controller.view.frame = CGRectMake(10, 100, kScreenWidth-20, 100);
+    NSArray *list = @[@"",@""];
+    [controller setDataByList:list className:@"ProductView"];
+    [self.view addSubview:controller.view];
+    [self addChildViewController:controller];
     
 }
 

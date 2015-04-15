@@ -88,6 +88,11 @@
 		189AD3301AD3D90900CF70C2 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189AD32F1AD3D90900CF70C2 /* NewsCell.xib */; };
 		18AFEC231AA41333005E5C5E /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFEC221AA41333005E5C5E /* BaseTableViewCell.m */; };
 		18AFEC261AA436C0005E5C5E /* TungControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AFEC251AA436C0005E5C5E /* TungControllerData.m */; };
+		18B8F6191ADE16A300463044 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8F6171ADE16A300463044 /* ScrollViewController.m */; };
+		18B8F61A1ADE16A300463044 /* ScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B8F6181ADE16A300463044 /* ScrollViewController.xib */; };
+		18B8F61D1ADE178900463044 /* BaseScrollCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8F61C1ADE178900463044 /* BaseScrollCellView.m */; };
+		18B8F6211ADE3E9700463044 /* ProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8F6201ADE3E9700463044 /* ProductView.m */; };
+		18B8F6231ADE3EC400463044 /* ProductView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B8F6221ADE3EC400463044 /* ProductView.xib */; };
 		18B92D3C1A43F32F008761A4 /* MJRefresh.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18B92D321A43F32F008761A4 /* MJRefresh.bundle */; };
 		18B92D3D1A43F32F008761A4 /* MJRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D351A43F32F008761A4 /* MJRefreshBaseView.m */; };
 		18B92D3E1A43F32F008761A4 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B92D371A43F32F008761A4 /* MJRefreshConst.m */; };
@@ -279,6 +284,15 @@
 		18AFEC221AA41333005E5C5E /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		18AFEC241AA436C0005E5C5E /* TungControllerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TungControllerData.h; sourceTree = "<group>"; };
 		18AFEC251AA436C0005E5C5E /* TungControllerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TungControllerData.m; sourceTree = "<group>"; };
+		18B8F6161ADE16A300463044 /* ScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		18B8F6171ADE16A300463044 /* ScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		18B8F6181ADE16A300463044 /* ScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollViewController.xib; sourceTree = "<group>"; };
+		18B8F61B1ADE178900463044 /* BaseScrollCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScrollCellView.h; sourceTree = "<group>"; };
+		18B8F61C1ADE178900463044 /* BaseScrollCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScrollCellView.m; sourceTree = "<group>"; };
+		18B8F61E1ADE3C6E00463044 /* ScrollViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewDelegate.h; sourceTree = "<group>"; };
+		18B8F61F1ADE3E9700463044 /* ProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductView.h; sourceTree = "<group>"; };
+		18B8F6201ADE3E9700463044 /* ProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductView.m; sourceTree = "<group>"; };
+		18B8F6221ADE3EC400463044 /* ProductView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductView.xib; sourceTree = "<group>"; };
 		18B92D321A43F32F008761A4 /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
 		18B92D331A43F32F008761A4 /* MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefresh.h; sourceTree = "<group>"; };
 		18B92D341A43F32F008761A4 /* MJRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshBaseView.h; sourceTree = "<group>"; };
@@ -362,6 +376,9 @@
 				18BBAA3E1AD5257A00C095E9 /* LoginViewController.h */,
 				18BBAA3F1AD5257A00C095E9 /* LoginViewController.m */,
 				18BBAA401AD5257A00C095E9 /* LoginViewController.xib */,
+				18B8F61F1ADE3E9700463044 /* ProductView.h */,
+				18B8F6221ADE3EC400463044 /* ProductView.xib */,
+				18B8F6201ADE3E9700463044 /* ProductView.m */,
 				183872021A426AC6000D63B7 /* AppDelegate.h */,
 				183872031A426AC6000D63B7 /* AppDelegate.m */,
 				183872051A426AC6000D63B7 /* ViewController.h */,
@@ -425,7 +442,13 @@
 				183872331A427614000D63B7 /* Include.h */,
 				183872341A427614000D63B7 /* API.h */,
 				18AFEC211AA41333005E5C5E /* BaseTableViewCell.h */,
+				18B8F61E1ADE3C6E00463044 /* ScrollViewDelegate.h */,
 				18AFEC221AA41333005E5C5E /* BaseTableViewCell.m */,
+				18B8F61B1ADE178900463044 /* BaseScrollCellView.h */,
+				18B8F61C1ADE178900463044 /* BaseScrollCellView.m */,
+				18B8F6161ADE16A300463044 /* ScrollViewController.h */,
+				18B8F6171ADE16A300463044 /* ScrollViewController.m */,
+				18B8F6181ADE16A300463044 /* ScrollViewController.xib */,
 				18B9FD561AA99ED300A7238D /* NewsCell.h */,
 				18B9FD571AA99ED300A7238D /* NewsCell.m */,
 				189AD32F1AD3D90900CF70C2 /* NewsCell.xib */,
@@ -855,9 +878,11 @@
 				1838720A1A426AC6000D63B7 /* Main.storyboard in Resources */,
 				18BBAA421AD5257A00C095E9 /* LoginViewController.xib in Resources */,
 				18B92D461A43FBEB008761A4 /* UINavbarPickerView.xib in Resources */,
+				18B8F61A1ADE16A300463044 /* ScrollViewController.xib in Resources */,
 				183872CF1A42835E000D63B7 /* LICENSE in Resources */,
 				1838720F1A426AC6000D63B7 /* LaunchScreen.xib in Resources */,
 				183872A41A428346000D63B7 /* LICENSE in Resources */,
+				18B8F6231ADE3EC400463044 /* ProductView.xib in Resources */,
 				18B92D3C1A43F32F008761A4 /* MJRefresh.bundle in Resources */,
 				1838722F1A4273FD000D63B7 /* UINavigationBarView.xib in Resources */,
 				189AD3301AD3D90900CF70C2 /* NewsCell.xib in Resources */,
@@ -923,6 +948,7 @@
 				183872A71A428346000D63B7 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				183872711A428334000D63B7 /* README.md in Sources */,
 				183872D11A42835E000D63B7 /* NSData+ImageContentType.m in Sources */,
+				18B8F6211ADE3E9700463044 /* ProductView.m in Sources */,
 				183872A51A428346000D63B7 /* README.md in Sources */,
 				18BA3C331A5D76310095B789 /* RBCustomDatePickerView.m in Sources */,
 				183872A01A428346000D63B7 /* AFURLConnectionOperation.m in Sources */,
@@ -947,6 +973,7 @@
 				183872511A427A63000D63B7 /* UIView+Extensions.m in Sources */,
 				183872D51A42835E000D63B7 /* SDWebImageDownloader.m in Sources */,
 				1838729B1A428346000D63B7 /* AFHTTPRequestOperation.m in Sources */,
+				18B8F61D1ADE178900463044 /* BaseScrollCellView.m in Sources */,
 				1838724B1A427A63000D63B7 /* UIAutoScrollLabel.m in Sources */,
 				1838729E1A428346000D63B7 /* AFNetworkReachabilityManager.m in Sources */,
 				18B92D581A441FAF008761A4 /* DataLog.m in Sources */,
@@ -988,6 +1015,7 @@
 				183872AB1A428346000D63B7 /* UIProgressView+AFNetworking.m in Sources */,
 				1838724D1A427A63000D63B7 /* UIColorProgressBar.m in Sources */,
 				183872D61A42835E000D63B7 /* SDWebImageDownloaderOperation.m in Sources */,
+				18B8F6191ADE16A300463044 /* ScrollViewController.m in Sources */,
 				183872011A426AC6000D63B7 /* main.m in Sources */,
 				1838729F1A428346000D63B7 /* AFSecurityPolicy.m in Sources */,
 				183872491A427A63000D63B7 /* NSArray+BeeExtension.mm in Sources */,

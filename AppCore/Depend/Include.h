@@ -19,6 +19,7 @@
 #import "KKNavigationController.h"
 #import "UIImageView+WebCache.h"
 #import "SDWebImage+Extension.h"
+#import "UIView+Extensions.h"
 #import "AFNetworking.h"
 #import "ReactiveCocoa.h"
 
